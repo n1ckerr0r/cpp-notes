@@ -1,0 +1,5 @@
+# hidden folders
+.idea
+
+# folders
+cmake-build-debug

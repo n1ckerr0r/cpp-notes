@@ -15,11 +15,12 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 
-add_executable(Project main.cpp)
+add_executable(Project main.cpp
+        main.h)
 add_executable(Tests tests.cpp)
 
 target_include_directories(Tests PRIVATE ${gtest_SOURCE_DIR}/googletest/include)
-target_link_libraries(Tests gtest gtest_main)
+target_link_libraries(Tests gtest gtest_main gmock gmock_main)
 
 enable_testing()
 add_test(NAME Tests COMMAND Tests)
